@@ -1,10 +1,13 @@
 /*
 Theme Name: Accion Aborto
 Theme URI: www.accionaborto.cl
-Description: Plantilla del sitio
-Version: 1.0
+Description: Tema para el sitio web de la Mesa Acción por el Aborto en Chile.
+Version: 1.1-alpha1
 Author: Gonzalo Vlassov
 Author URL: www.behance.com/vlasovgrafico
+
+Para acceso al repositorio: hola [arroba] szz [punto] cl.
+
 */
 
 @import url("css/reset.css");
@@ -204,6 +207,7 @@ h3 {
 
 section {
     padding-top: 70px;
+    min-height: 100vh;
 }
 
 nav {
@@ -253,7 +257,8 @@ header {
 #inicio{
         background: #d81760;
     width: auto;
-    height: 480px;
+    min-height: 100vh;
+    height: 100%;
 }
 
 #inicio div{
