@@ -44,7 +44,7 @@ body {
 
 .contenedor {
     width: 70%;
-    max-width: 680px;
+    max-width: 980px;
     margin: 0 auto 0 auto;
 }
 
@@ -93,8 +93,8 @@ strong{
 }
 p.descripcion {
     font-size: 37px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 h1,
@@ -301,7 +301,11 @@ h1{
     background: #363636;
     width: 100%;
     height: auto;
-    padding-bottom: 70px;
+    padding: 0;/*70px*/
+}
+
+#quienes div.contenedor {
+  padding-top: 70px;
 }
 
 #quienes h2 {
@@ -363,10 +367,14 @@ h1{
     background: #d81760;
     width: 100%;
     height: auto;
-    padding-bottom: 70px;
+    padding-bottom: 0;
+    padding-top: 0;
     background-image: url("img/herramientasfondo.png");
     background-position: center 150%;
     background-repeat: no-repeat;
+}
+#herramientas .contenedor {
+  padding: 70px 0;
 }
 
 #herramientas h2,  #headerherramientas h2 {
@@ -381,10 +389,14 @@ h1{
     background: #363636;
     width: 100%;
     height: auto;
-    padding-bottom: 70px;
+    padding-bottom: 0;
+    padding-top: 0;
     background-image: url("img/prensafondo.png");
     background-position: center 0%;
     background-repeat: no-repeat;
+}
+#prensa .contenedor {
+  padding: 70px 0;
 }
 
 #prensa h2, #headerprensa h2 {
@@ -521,7 +533,7 @@ footer {
 }
 
 #argumentos .boton{
-	margin-top: 100px!important;
+	margin-top: 90px!important;
 }
 
 .slicknav_menu {
