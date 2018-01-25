@@ -1,0 +1,610 @@
+/*
+Theme Name: Accion Aborto
+Theme URI: www.accionaborto.cl
+Description: Tema para el sitio web de la Mesa Acción por el Aborto en Chile.
+Version: 1.1-alpha1
+Author: Gonzalo Vlassov
+Author URL: www.behance.com/vlasovgrafico
+
+Para acceso al repositorio: hola [arroba] szz [punto] cl.
+
+*/
+
+@import url("css/reset.css");
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.responsive {
+    display: flex;
+    display: -webkit-flex;
+    align-content: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    text-align: center;
+}
+
+.space-between {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+}
+
+.contenedor {
+    width: 70%;
+    max-width: 980px;
+    margin: 0 auto 0 auto;
+}
+
+a{
+    color:#d81760;
+}
+a:hover{
+    color:black;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+    font-family: 'Londrina Solid';
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+article a{
+    font-family: 'Fira Sans', sans-serif!important;
+    text-transform: initial;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+article p{
+
+    line-height: 20px!important;
+    text-align: justify!important;
+    -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+strong{
+    font-weight: 400;
+}
+p.descripcion {
+    font-size: 37px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1,
+h2 {
+    font-size: 40px;
+    height: 70px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.boton {
+    display: block;
+    margin-bottom: 10px!important;
+    font-size: 18px;
+    font-family: 'Londrina Solid';
+    text-transform: uppercase;
+    vertical-align: center;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    width: 190px;
+    background-color: #894e9c;
+    margin: 0 auto 0 auto;
+    text-decoration: none;
+    color: white;
+    -moz-transform: translateX(-5px) translateY(-5px);
+    -webkit-transform: translateX(-5px) translateY(-5px);
+    -o-transform: translateX(-5px) translateY(-5px);
+    -ms-transform: translateX(-5px) translateY(-5px);
+    transform: translateX(-5px) translateY(-5px);
+    -webkit-box-shadow: 5px 5px 0 0 #202020;
+    box-shadow: 5px 5px 0 0 #202020;
+}
+
+.boton:hover {
+    background-color: #ad74c0;
+}
+
+.boton:active {
+    background-color: #592f66;
+    -moz-transform: translateX(0px) translateY(0px);
+    -webkit-transform: translateX(0px) translateY(0px);
+    -o-transform: translateX(0px) translateY(0px);
+    -ms-transform: translateX(0px) translateY(0px);
+    transform: translateX(0px) translateY(0px);
+    -webkit-box-shadow: 0px 0px 0 0 #363636;
+    box-shadow: 0px 0px 0 0 #363636;
+}
+
+
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.facebook:hover {
+    background-color: #5679c1;
+}
+
+.facebook:active {
+    background-color: #253f77;
+}
+
+.textoblanco {
+    color: white;
+}
+
+.textorojo {
+    color: #d81760;
+}
+
+.textogris {
+    color: #363636;
+}
+
+.textoamarillo {
+    color: #eed9a7;
+}
+
+
+
+
+
+.bold {
+    font-weight: 800;
+}
+
+.underbarwhite {
+    background-image: url("img/underbar_white.png");
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 100% 10px;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+}
+
+.underbarred {
+    background-image: url("img/underbar_red.png");
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 100% 10px;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: pixelated;
+}
+
+section {
+    padding-top: 70px;
+    min-height: 100vh;
+}
+
+nav {
+    background: #894e9c;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 300;
+}
+
+.menu{
+	height: 60px;
+	width: 100%;
+}
+.menu li a{
+	color:white!important;
+	text-decoration: none;
+    line-height: 60px;
+    height: 60px;
+    display: block;
+}
+
+.menu li a:hover{
+    background-color:black;
+}
+.menu li{
+    height: 60px;
+    width: 100%;
+}
+
+
+#menu li:last-child a{
+    display: block;
+}
+
+
+
+header {
+    background: #d81760;
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+}
+
+
+
+#inicio{
+        background: #d81760;
+    width: auto;
+    min-height: 100vh;
+    height: 100%;
+}
+
+#inicio div{
+    height: 100%;
+}
+
+.morado{
+    background: #83266d;
+}
+
+.azul{
+    background: #10a4ff;
+}
+
+.amarillo{
+    background: #ebd23a;
+}
+
+
+
+
+h1{
+	display: block;
+	background:url("img/logo.png") no-repeat center bottom;
+	width: 197px;
+	height: 230px;
+	padding-top: 200px;
+	margin: 0 auto 80px auto;
+	text-indent: -999999px;
+}
+#manos{
+	background:url("img/manos.png") no-repeat center right;
+	width: 259px;
+	height: 203px;
+	float: right;
+}
+
+
+#quienes {
+    background: #363636;
+    width: 100%;
+    height: auto;
+    padding: 0;/*70px*/
+}
+
+#quienes div.contenedor {
+  padding-top: 70px;
+}
+
+#quienes h2 {
+    width: 270px;
+}
+
+#quienes h3 {
+    color: #eed9a7;
+    margin-bottom: 10px;
+}
+
+#quienes p {
+    color: white;
+    max-width: 100%;
+    text-align: justify;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 30px; /* Firefox */
+    column-gap: 30px;
+    -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+#quienes ul li {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#quienes a {
+    color: #eed9a7;
+    font-family: "Fira Sans";
+    font-weight: 400;
+    text-transform: initial;
+}
+
+#quienes ul li img {
+    margin-bottom: 20px;
+}
+
+#argumentos {
+    background: #eed9a7;
+    width: 100%;
+    height: auto;
+    padding-bottom: 70px;
+}
+
+#argumentos h2, #headerargumentos h2 {
+    width: 440px;
+}
+
+#argumentos p.descripcion {
+    color: #363636;
+}
+
+#herramientas {
+    background: #d81760;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-image: url("img/herramientasfondo.png");
+    background-position: center 150%;
+    background-repeat: no-repeat;
+}
+#herramientas .contenedor {
+  padding: 70px 0;
+}
+
+#herramientas h2,  #headerherramientas h2 {
+    width: 460px;
+}
+
+#herramientas p.descripcion {
+    color: white;
+}
+
+#prensa {
+    background: #363636;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-image: url("img/prensafondo.png");
+    background-position: center 0%;
+    background-repeat: no-repeat;
+}
+#prensa .contenedor {
+  padding: 70px 0;
+}
+
+#prensa h2, #headerprensa h2 {
+    width: 370px;
+}
+
+#prensa p.descripcion {
+    color: white;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    background: #894e9c;
+}
+#logofooter{
+    width: 150px;
+    height: 180px;
+    background:url("img/logo.png") no-repeat center 30px;
+    background-size: 70%;
+    position: relative;
+    z-index: 400;
+}
+
+.right, .right a{
+    -webkit-align-content: right;
+    -webkit-align-items: right;
+    text-align: left;
+    font-family: "Fira Sans"!important;
+    text-transform: inherit;
+    font-size: 14px;
+    font-weight: 200;
+    color:white;
+    text-decoration: none;
+}
+
+.right li{
+    margin-bottom: 10px;
+}
+
+.right a{
+    background-position: left center;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    padding-left: 22px;
+}
+
+.right span{
+
+
+    font-size: 23px;
+    font-weight: 500;
+}
+.left, .left a{
+    -webkit-align-content: left;
+    -webkit-align-items: left;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+.left{
+
+    border-left:solid 4px #eed9a7;
+    padding-left: 30px;
+}
+
+
+.left a:hover{
+    color:black;
+}
+
+.responsivefooter {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+
+
+
+.articulo {
+    background: white;
+    width: 95%;
+    max-width: 420px;
+    height: auto;
+}
+.sombraroja{
+    -webkit-box-shadow: 5px 5px 0 0 #d81760;
+    box-shadow: 5px 5px 0 0 #d81760;
+}
+.sombranegra{
+    -webkit-box-shadow: 5px 5px 0 0 #202020;
+    box-shadow: 5px 5px 0 0 #202020;
+}
+
+.contenido {
+    width: 80%;
+    height: auto;
+    padding: 20px 0;
+    margin: 0 auto 0 auto;
+}
+
+.articulo p,
+.articulo h4 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.articulo h4 {
+    font-size: 20px;
+    color: #363636;
+}
+
+.leermas {
+    display: block;
+    color: #d81760;
+    text-align: left!important;
+}
+
+.cabecera {
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#argumentos .boton{
+	margin-top: 90px!important;
+}
+
+.slicknav_menu {
+    display:none;
+}
+
+
+
+
+
+
+@media screen and (min-width: 10px) and (max-width: 920px) {
+
+    .menu, nav {
+        display:none;
+    }
+
+
+
+    .slicknav_menu {
+        display:block;
+        position: fixed;
+        width: 100%;
+        z-index: 99999;
+        background: #894e9c!important;
+    }
+
+    .responsive {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .contenedor {
+        width: 80%;
+    }
+    #quienes ul li {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 10px) and (max-width: 600px) {
+    h2 {
+        font-size: 30px;
+        width: 100%!important;
+        background: initial!important;
+        text-decoration: underline;
+    }
+    p.descripcion{
+        font-size: 32px;
+        margin-top: 60px;
+    }
+    #quienes h2,
+    #argumentos h2,
+    #prensa h2 {
+        text-decoration-color: #d81760;
+    }
+    h1 {
+
+    width: 147px;
+    height: 230px;
+    padding-top: 75px;
+
+    background-size: contain;
+
+}
+#quienes p {
+    color: white;
+    max-width: 100%;
+    text-align: justify;
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+}
+}
