@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
     <meta charset=“utf-8”>
@@ -23,5 +22,4 @@
     });
     });
 </script>
-
 </head>
