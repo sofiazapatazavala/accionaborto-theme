@@ -1,22 +1,32 @@
 /*
-Theme Name: Accion Aborto
-Theme URI: www.accionaborto.cl
-Description: Tema para el sitio web de la Mesa Acción por el Aborto en Chile.
-Version: 1.1-alpha1
-Author: Gonzalo Vlassov
-Author URL: www.behance.com/vlasovgrafico
+Theme Name: Accion Aborto 2
+Theme URI: https://github.com/sofiazapatazavala/mesaaborto-theme/
+Author: Sofía Zapata Zavala
+Author URI: https://szz.cl/
+Description: Acción Aborto es el tema de la Mesa Acción para el Aborto en Chile, actualizado para una mayor y mejor compatibilidad con funciones de WordPress que permitan su crecimiento posterior.
+Version: 2.0-alpha
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: accionaborto
+Tags: multilingual, white, widgets, menus, one column, bootstrap 4, bootstrap, responsive
 
-Para acceso al repositorio: hola [arroba] szz [punto] cl.
+For any inqueries **about the theme**, please send me an email: hola [at] szz [dot] cl.
 
 */
 
-@import url("css/reset.css");
-html,
-body {
-    width: 100%;
-    height: 100%;
+/* Reset y Body ya no están porque están siendo manejados por Bootstrap */
+
+/* Helpers */
+
+
+
+/* header */
+
+header.superior {
+  background: #894e9c;
 }
 
+/* Código anterior */
 
 .flex-row {
     display: flex;
@@ -255,8 +265,8 @@ header {
 
 
 #inicio{
-        background: #d81760;
-    width: auto;
+    background: #d81760;
+    width: 100%;
     min-height: 100vh;
     height: 100%;
 }

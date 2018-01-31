@@ -5,18 +5,18 @@
 
     <nav>
     <div class="contenedor">
-    
+
         <?php wp_nav_menu(
     array(
         'container' => false,
         'items_wrap' => '<ul id="menu" class="responsive menu space-between">%3$s</ul>',
         'theme_location' => 'menu2'
         )); ?>
-        
+
         </div>
     </nav>
 
-            
+
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 <header  id="headerarticulo" class="interiorheader" style="background-image: url('<?php echo $thumb['0'];?>')">
@@ -25,14 +25,14 @@
         </div>
 </header>
 
-     
+
     <section id="loadarticulo">
         <div class="contenedor">
     <article class="articulo sombraroja">
                 <div class="contenido">
                     <p class="columnas"><?php the_content();?></p>
                     <p><br>Publicado el <?php the_time('j,F,Y') ?></p>
-                    
+
                 </div>
             </article>
 
@@ -42,6 +42,6 @@
 <?php wp_reset_query(); ?>
         </div>
     </section>
-    
+
 
 <?php get_footer(); ?>

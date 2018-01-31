@@ -1,0 +1,44 @@
+
+
+
+.flex-center-wrapper {
+    display: flex;
+    display: -webkit-flex;
+    align-content: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.space-around {
+    display: flex;
+    display: -webkit-flex;
+  -webkit-justify-content: space-around; 
+  justify-content: space-around;
+
+}
+.space-between{
+    display: flex;
+    display: -webkit-flex;
+  -webkit-justify-content: space-between; 
+}
+
+
+
