@@ -1,20 +1,5 @@
 <?php get_header(); ?>
-<body>
 
-
-
-    <nav>
-    <div class="contenedor">
-
-        <?php wp_nav_menu(
-    array(
-        'container' => false,
-        'items_wrap' => '<ul id="menu" class="responsive menu space-between">%3$s</ul>',
-        'theme_location' => 'menu'
-        )); ?>
-
-        </div>
-    </nav>
     <header id="inicio" class="flex-row">
         <div class="amarillo" style="width: 2%"></div>
         <div class="azul" style="width: 2%"></div>

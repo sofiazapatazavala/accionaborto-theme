@@ -2,20 +2,6 @@
 <?php get_header(); ?>
 <body>
 
-
-
-    <nav>
-    <div class="contenedor">
-    
-        <?php wp_nav_menu(
-    array(
-        'container' => false,
-        'items_wrap' => '<ul id="menu" class="responsive menu space-between">%3$s</ul>',
-        'theme_location' => 'menu2'
-        )); ?>
-        
-        </div>
-    </nav>
      <header id="headerargumentos" class="interiorheader">
         <div class="contenedor">
         <h2 class="textoblanco underbarwhite"><span class="textoamarillo">Argumentos</span> para el Debate</h2>
@@ -29,9 +15,9 @@
         $current_page = get_queried_object();
 
         $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-        $query = new WP_Query( 
+        $query = new WP_Query(
             array(
-                'paged'         => $paged, 
+                'paged'         => $paged,
                 'category_name' => 'argumentos',
                 'order'         => 'desc',
                 'post_type'     => 'post',
@@ -41,7 +27,7 @@
         );
 
         if ($query->have_posts()) {
-               while ($query->have_posts()) { 
+               while ($query->have_posts()) {
                $query->the_post(); ?>
 
 
@@ -57,7 +43,7 @@
                     </div>
                 </article><!-- #post-## -->
 
-                
+
 
                 <?php
             }
@@ -73,6 +59,6 @@
 
         </div>
     </section>
-    
+
 
 <?php get_footer(); ?>
