@@ -22,7 +22,7 @@
         });
       });
     </script>
-    <!-- Grilla de Bootstrap, único CSS agregado por si acaso -->
+    <?php /* Grilla de Bootstrap, único CSS agregado para corregir los problemas ligados a orden en posts */ ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-grid.min.css">
 </head>
 <body <?php body_class(); ?>>

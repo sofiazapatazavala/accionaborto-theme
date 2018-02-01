@@ -1,20 +1,5 @@
 <?php get_header(); ?>
-<body>
 
-
-
-    <nav>
-    <div class="contenedor">
-
-        <?php wp_nav_menu(
-    array(
-        'container' => false,
-        'items_wrap' => '<ul id="menu" class="responsive menu space-between">%3$s</ul>',
-        'theme_location' => 'menu'
-        )); ?>
-
-        </div>
-    </nav>
     <header id="inicio" class="flex-row">
         <div class="amarillo" style="width: 2%"></div>
         <div class="azul" style="width: 2%"></div>
@@ -27,23 +12,66 @@
         </header>
     <section id="quienes">
         <div class="contenedor">
-            <h2 class="textoblanco underbarred">¿<span class="textoamarillo">Quiénes</span> Somos?</h2>
-            <ul class="responsive space-between">
 
-                <li class="flex-column">
-                    <img src="<?php bloginfo('template_url')?>/img/mujeres.png" />
-                    <h3>Somos Mujeres</h3>
-                    <p>La Mesa Acción por el Aborto en Chile se instala en 2015 con el objetivo de generar argumentos para el debate sobre la despenalización del aborto y el derecho a decidir de las mujeres. Este espacio está integrado por organizaciones de mujeres y feministas, organizaciones de derechos humanos, derechos sexuales y reproductivos como <a href="http://www.amnistia.cl">Amnistía Internacional </a>, <a href="http://www.aprofa.cl">APROFA</a>, Académicas de la Universidad de Chile y Universidad Diego Portales , <a href="http://www.humanas.cl">Corporación Humanas </a>, <a href="http://revoluciondemocratica.cl/frente-de-genero/">Frente de Género Revolución Democrática</a>, <a href="https://www.fondoalquimia.org">Fondo Alquimia , <a href="http://www.insmujer.cl">Fundación Instituto de la Mujer </a>, <a href="http://www.oge.cl">Observatorio de Género y Equidad</a>, <a href="http://www.observatoriogenerosalud.cl">Observatorio de Equidad de Género en Salud</a>, <a href="http://autonomascontralaviolencia.blogspot.cl">Coordinadora Autónoma Contra la Violencia</a>, <a href="https://www.facebook.com/IAFeminista/">Frente Feminista de Izquierda Autónoma</a></p>
-                </li>
-            </ul>
+          <?php /* El texto de "quienes somos" ahora es editable, los estilos se dejan intactos por ahora */ ?>
+          <?php
+            $my_query = new WP_Query( 'page_id=301' );
+            while ( $my_query->have_posts() ) : $my_query->the_post();
+            $do_not_duplicate[] = $post->ID;
+          ?>
+          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <?php the_content(); ?>
+              <?php edit_post_link( __( 'Editar', 'accionaborto' ), '<span>', '</span>' ); ?>
+          </article>
+          <?php endwhile; ?>
         </div>
     </section>
     <section id="argumentos" style="background-image: url(<?php bloginfo('template_url')?>/img/megafono.png); background-position: -2% 102%; background-repeat: no-repeat;">
+      <?php /* Usaremos grilla de Bootstrap para ordenar esta sección */ ?>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="textogris underbarred"><span class="textorojo">Argumentos</span> para el Debate</h2>
+            <p class="descripcion">Entrevistas y Columnas de Opinión para <span class="bold">informarse y difundir</span></p>
+          </div>
+        </div>
+        <div class="row">
+          <?php /* Cambiamos el uso de query_posts() por WP_Query(), en línea con el tratamiento actual de múltiples loops. */ ?>
+          <?php
+            $my_query = new WP_Query( 'category_name=argumentos&posts_per_page=3' );
+            while ( $my_query->have_posts() ) : $my_query->the_post();
+            $do_not_duplicate[] = $post->ID;
+          ?>
+          <div class="col-md-4">
+            <?php /* <div><img src="<?php bloginfo('template_url')?>/img/megafono.png" /></div> */ ?>
+              <article class="articulo sombraroja">
+                <?php if ( has_post_thumbnail() ) { ?>
+                  <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+                  <div class="cabecera" style="background-image: url('<?php echo $thumb['0'];?>')">
+                  </div>
+                <?php } ?>
+                <div class="contenido">
+                    <h5><?php the_time('j') ?> de <?php the_time('F') ?> de <?php the_time('Y') ?></h5>
+                    <h4><?php the_title();?></h4>
+                    <?php the_excerpt(); ?>
+                    <a class="leermas" href="<?php the_permalink();?>">Leer más</a>
+                </div>
+              </article>
+          </div>
+          <?php endwhile; ?>
+        </div>
+        <div class="row">
+          <div class="col">
+            <a class="boton" href="http://www.accionaborto.cl/argumentos/">Ver más Argumentos</a>
+          </div>
+        </div>
+      </div>
+      <!-- Parte antigua -->
         <div class="contenedor">
             <h2 class="textogris underbarred"><span class="textorojo">Argumentos</span> para el Debate</h2>
             <p class="descripcion">Entrevistas y Columnas de Opinión para <span class="bold">informarse y difundir</span></p>
             <div class="responsive space-between">
-                <!-- <div><img src="<?php bloginfo('template_url')?>/img/megafono.png" /></div> -->
+              <?php /* <div><img src="<?php bloginfo('template_url')?>/img/megafono.png" /></div> */ ?>
 
                 <?php query_posts('category_name=argumentos&posts_per_page=2'); ?>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
