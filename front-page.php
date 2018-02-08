@@ -31,7 +31,9 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="textogris underbarred"><span class="textorojo">Argumentos</span> para el Debate</h2>
+            <h2 class="textogris underbarred">
+              <a href="<?php echo get_permalink(6); ?>"><span class="textorojo">Argumentos</span> para el Debate</a>
+            </h2>
             <p class="descripcion">Entrevistas y Columnas de Opinión para <span class="bold">informarse y difundir</span></p>
           </div>
         </div>
@@ -60,56 +62,174 @@
           </div>
           <?php endwhile; ?>
         </div>
+        <?php
+          // Se dejará comentado cada botón.
+          /*
+          <div class="row">
+            <div class="col">
+              <a class="boton" href="http://www.accionaborto.cl/argumentos/">Ver más Argumentos</a>
+            </div>
+          </div>
+          */
+        ?>
+      </div>
+    </section>
+    <section id="herramientas">
+      <div class="container-fluid">
         <div class="row">
           <div class="col">
-            <a class="boton" href="http://www.accionaborto.cl/argumentos/">Ver más Argumentos</a>
+            <div class="contenedor">
+                <h2 class="textoblanco underbarwhite">
+                  <a href="<?php echo get_permalink(15); ?>"><span class="textoamarillo">Herramientas</span> para la Acción</a>
+                </h2>
+                <p class="descripcion">Gráficas, GIFs, Infografías, Videos y Programas de Radio para <span class="bold">compartir</span></p>
+                <?php /*
+                  <a class="boton" href="http://www.accionaborto.cl/herramientas/">Todas las herramientas</a>
+                  <a class="boton facebook" href="https://www.facebook.com/Mesa-Acci%C3%B3n-por-el-Aborto-en-Chile-219747685183613/">Ir a Facebook</a>
+                */ ?>
+                <div style="height: 2rem;"></div>
+                <h3 class="textoblanco underbarwhite"><span class="textoamarillo">Más</span> recientes</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3 class="textoamarillo underbarwhite">Gráficas</h3>
+            <br>
+            <?php
+              $my_query = new WP_Query( 'category_name=graficas&posts_per_page=2' );
+              while ( $my_query->have_posts() ) : $my_query->the_post();
+              $do_not_duplicate[] = $post->ID;
+            ?>
+            <article class="articulo sombranegra">
+              <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+              <div class="multimedia" style="background-image: url('<?php echo $thumb['0'];?>')">
+              </div>
+              <div class="contenido flex-row">
+                <h4><?php the_title();?></h4>
+                <button class="sharer button box" data-sharer="facebook" data-url='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/share.png')">S</button>
+                <a class="box" href='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/download.png')">L</a>
+              </div>
+            </article>
+            <?php endwhile; ?>
+          </div>
+          <div class="col">
+            <h3 class="textoamarillo underbarwhite">GIFs</h3>
+            <br>
+            <?php
+              $my_query = new WP_Query( 'category_name=gif&posts_per_page=2' );
+              while ( $my_query->have_posts() ) : $my_query->the_post();
+              $do_not_duplicate[] = $post->ID;
+            ?>
+            <article class="articulo sombranegra">
+              <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+              <div class="multimedia" style="background-image: url('<?php echo $thumb['0'];?>')">
+              </div>
+              <div class="contenido flex-row">
+                <h4><?php the_title();?></h4>
+                <button class="sharer button box" data-sharer="facebook" data-url='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/share.png')">S</button>
+                <a class="box" href='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/download.png')">L</a>
+              </div>
+            </article>
+            <?php endwhile; ?>
+          </div>
+          <div class="col">
+            <h3 class="textoamarillo underbarwhite">Infografías</h3>
+            <br>
+            <?php
+              $my_query = new WP_Query( 'category_name=infografias&posts_per_page=2' );
+              while ( $my_query->have_posts() ) : $my_query->the_post();
+              $do_not_duplicate[] = $post->ID;
+            ?>
+            <article class="articulo sombranegra">
+              <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+              <div class="multimedia" style="background-image: url('<?php echo $thumb['0'];?>')">
+              </div>
+              <div class="contenido flex-row">
+                <h4><?php the_title();?></h4>
+                <button class="sharer button box" data-sharer="facebook" data-url='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/share.png')">S</button>
+                <a class="box" href='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/download.png')">L</a>
+              </div>
+            </article>
+            <?php endwhile; ?>
+          </div>
+          <div class="col">
+            <h3 class="textoamarillo underbarwhite">Videos</h3>
+            <br>
+            <?php
+              $my_query = new WP_Query( 'category_name=videos&posts_per_page=2' );
+              while ( $my_query->have_posts() ) : $my_query->the_post();
+              $do_not_duplicate[] = $post->ID;
+            ?>
+            <article class="articulo sombranegra">
+              <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+              <div class="multimedia" style="background-image: url('<?php echo $thumb['0'];?>')">
+              </div>
+              <div class="contenido flex-row">
+                <h4><?php the_title();?></h4>
+                <button class="sharer button box" data-sharer="facebook" data-url='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/share.png')">S</button>
+                <a class="box" href='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/download.png')">L</a>
+              </div>
+            </article>
+            <?php endwhile; ?>
+          </div>
+          <div class="col">
+            <h3 class="textoamarillo underbarwhite">Programas de radio</h3>
+            <br>
+            <?php
+              $my_query = new WP_Query( 'category_name=programas-de-radio&posts_per_page=2' );
+              while ( $my_query->have_posts() ) : $my_query->the_post();
+              $do_not_duplicate[] = $post->ID;
+            ?>
+            <article class="articulo sombranegra">
+              <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+              <div class="multimedia" style="background-image: url('<?php echo $thumb['0'];?>')">
+              </div>
+              <div class="contenido flex-row">
+                <h4><?php the_title();?></h4>
+                <button class="sharer button box" data-sharer="facebook" data-url='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/share.png')">S</button>
+                <a class="box" href='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/download.png')">L</a>
+              </div>
+            </article>
+            <?php endwhile; ?>
           </div>
         </div>
       </div>
-      <!-- Parte antigua -->
-        <div class="contenedor">
-            <h2 class="textogris underbarred"><span class="textorojo">Argumentos</span> para el Debate</h2>
-            <p class="descripcion">Entrevistas y Columnas de Opinión para <span class="bold">informarse y difundir</span></p>
-            <div class="responsive space-between">
-              <?php /* <div><img src="<?php bloginfo('template_url')?>/img/megafono.png" /></div> */ ?>
-
-                <?php query_posts('category_name=argumentos&posts_per_page=2'); ?>
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <article class="articulo sombraroja">
-                  <?php if ( has_post_thumbnail() ) { ?>
-                    <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-                    <div class="cabecera" style="background-image: url('<?php echo $thumb['0'];?>')">
-                    </div>
-                  <?php } ?>
-                  <div class="contenido">
-                      <h4><?php the_title();?></h4>
-                      <?php the_excerpt('30');?><p><br>Publicado el <?php the_time('j') ?> de <?php the_time('F') ?> de <?php the_time('Y') ?></p>
-                      <a class="leermas" href="<?php the_permalink();?>">Leer más</a>
-                  </div>
-                </article>
-
-                <?php endwhile; else: ?>
-                <h3>No se encontraron Articulos</h3>
-                 <?php endif; ?>
-<?php wp_reset_query(); ?>
-
-            </div>
-            <a class="boton" href="http://www.accionaborto.cl/argumentos/">Ver más Argumentos</a>
-        </div>
-    </section>
-    <section id="herramientas">
-        <div class="contenedor">
-            <h2 class="textoblanco underbarwhite"><span class="textoamarillo">Herramientas</span> para la Acción</h2>
-            <p class="descripcion">Gráficas, GIFs, Infografías, Videos y Programas de Radio para <span class="bold">compartir</span></p>
-            <a class="boton" href="http://www.accionaborto.cl/herramientas/">Ir a Herramientas</a>
-            <a class="boton facebook" href="https://www.facebook.com/Mesa-Acci%C3%B3n-por-el-Aborto-en-Chile-219747685183613/">Ir a Facebook</a>
-        </div>
     </section>
     <section id="prensa">
-        <div class="contenedor">
-            <h2 class="textoblanco underbarred">Apariciones en <span class="textoamarillo">Prensa</span></h2>
-            <p class="descripcion">Noticias en Televisión, Radio, Medios Impresos y Digitales para <span class="bold">difundir</span></p>
-            <a class="boton" href="http://www.accionaborto.cl/prensa/">Ver links de prensa</a>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="contenedor">
+                <h2 class="textoblanco underbarred">
+                  <a href="<?php echo get_permalink(18); ?>">Apariciones en <span class="textoamarillo">Prensa</span></a>
+                </h2>
+                <p class="descripcion">Noticias en Televisión, Radio, Medios Impresos y Digitales para <span class="bold">difundir</span></p>
+                <?php /* <a class="boton" href="http://www.accionaborto.cl/prensa/">Ver links de prensa</a> */ ?>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <?php
+            $my_query = new WP_Query( 'category_name=prensa&posts_per_page=3' );
+            while ( $my_query->have_posts() ) : $my_query->the_post();
+            $do_not_duplicate[] = $post->ID;
+          ?>
+          <div class="col-md-4">
+            <article class="articulo sombranegra">
+                <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+                <div class="cabecera" style="background-image: url('<?php echo $thumb['0'];?>')">
+                </div>
+                <div class="contenido">
+                    <h4><?php the_title();?></h4>
+                    <p><?php the_excerpt();?></p>
+                    <a class="boton" href="<?php the_field('link'); ?>">Leer más</a>
+                </div>
+            </article>
+          </div>
+          <?php endwhile; ?>
+        </div>
+      </div>
+
     </section>
 <?php get_footer(); ?>
