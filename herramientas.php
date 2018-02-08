@@ -10,6 +10,8 @@
     </header>
     <section id="loadherramientas">
         <div id="loader" class="contenedor flex-wrap">
+          <div class="container">
+            <div class="row">
 
 <?php
         $current_page = get_queried_object();
@@ -30,6 +32,7 @@
                while ($query->have_posts()) {
                $query->the_post(); ?>
 
+               <div class="col-md-4">
 
             <article class="articulo sombranegra">
             <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
@@ -43,19 +46,24 @@
                     <a class="box" href='<?php the_field('multimedia'); ?>' style="background-image: url('<?php bloginfo('template_url')?>/img/download.png')">L</a>
                 </div>
             </article>
-
-                <?php
+          </div>
+          <?php
             }
-
-            // next_posts_link() usage with max_num_pages
-            next_posts_link( '<span class="textoblanco">Entradas Anteriores</span>', $query->max_num_pages );
-            previous_posts_link( '<span class="textoblanco" style="margin-right:20px">Nuevas Entradas</span>' );
-
             wp_reset_postdata();
-        }
-        ?>
-
+          }
+          ?>
         </div>
+        <div class="row">
+          <div class="col">
+            <?php
+              // next_posts_link() usage with max_num_pages
+              next_posts_link( '<span style="float: left;">Entradas Anteriores</span>', $query->max_num_pages );
+              previous_posts_link( '<span style="float: right;">Nuevas Entradas</span>' );
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
 
 

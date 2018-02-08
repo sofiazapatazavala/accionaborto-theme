@@ -10,6 +10,8 @@
     </header>
     <section id="loadargumentos">
         <div class="contenedor">
+          <div class="container">
+            <div class="row">
 
          <?php
         $current_page = get_queried_object();
@@ -30,7 +32,7 @@
                while ($query->have_posts()) {
                $query->the_post(); ?>
 
-
+               <div class="col-md-4">
 
                 <article class="articulo sombraroja">
                    <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
@@ -42,21 +44,23 @@
                         <a class="leermas" href="<?php the_permalink();?>">Leer más</a>
                     </div>
                 </article><!-- #post-## -->
-
-
-
+              </div>
+              <?php
+                }
+                wp_reset_postdata();
+              }
+              ?>
+            </div>
+            <div class="row">
+              <div class="col">
                 <?php
-            }
-
-            // next_posts_link() usage with max_num_pages
-            next_posts_link( 'Entradas Anteriores', $query->max_num_pages );
-            previous_posts_link( '<span style="margin-left:20px">Nuevas Entradas</span>' );
-
-            wp_reset_postdata();
-        }
-        ?>
-
-
+                  // next_posts_link() usage with max_num_pages
+                  next_posts_link( '<span style="float: left;">Entradas Anteriores</span>', $query->max_num_pages );
+                  previous_posts_link( '<span style="float: right;">Nuevas Entradas</span>' );
+                ?>
+              </div>
+            </div>
+          </div>
         </div>
     </section>
 

@@ -158,25 +158,28 @@ h3 {
     background-color: #253f77;
 }
 
+/* Se les pondrá !important a todos los textos para que cuando estén con <a> mantengan el color. */
 .textoblanco {
-    color: white;
+    color: white!important;
 }
 
 .textorojo {
-    color: #d81760;
+    color: #d81760!important;
 }
 
 .textogris {
-    color: #363636;
+    color: #363636!important;
 }
 
 .textoamarillo {
-    color: #eed9a7;
+    color: #eed9a7!important;
 }
 
-
-
-
+/* También se agrega esta clase para los links de portada */
+.link-portada, .link-portada:hover {
+  color: inherit;
+  text-decoration: none;
+}
 
 .bold {
     font-weight: 800;

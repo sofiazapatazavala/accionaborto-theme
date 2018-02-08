@@ -32,7 +32,7 @@
         <div class="row">
           <div class="col">
             <h2 class="textogris underbarred">
-              <a href="<?php echo get_permalink(6); ?>"><span class="textorojo">Argumentos</span> para el Debate</a>
+              <a href="<?php echo get_permalink(6); ?>" class="link-portada"><span class="textorojo">Argumentos</span> para el Debate</a>
             </h2>
             <p class="descripcion">Entrevistas y Columnas de Opinión para <span class="bold">informarse y difundir</span></p>
           </div>
@@ -80,7 +80,7 @@
           <div class="col">
             <div class="contenedor">
                 <h2 class="textoblanco underbarwhite">
-                  <a href="<?php echo get_permalink(15); ?>"><span class="textoamarillo">Herramientas</span> para la Acción</a>
+                  <a href="<?php echo get_permalink(15); ?>" class="link-portada"><span class="textoamarillo">Herramientas</span> para la Acción</a>
                 </h2>
                 <p class="descripcion">Gráficas, GIFs, Infografías, Videos y Programas de Radio para <span class="bold">compartir</span></p>
                 <?php /*
@@ -202,7 +202,7 @@
           <div class="col">
             <div class="contenedor">
                 <h2 class="textoblanco underbarred">
-                  <a href="<?php echo get_permalink(18); ?>">Apariciones en <span class="textoamarillo">Prensa</span></a>
+                  <a href="<?php echo get_permalink(18); ?>" class="link-portada">Apariciones en <span class="textoamarillo">Prensa</span></a>
                 </h2>
                 <p class="descripcion">Noticias en Televisión, Radio, Medios Impresos y Digitales para <span class="bold">difundir</span></p>
                 <?php /* <a class="boton" href="http://www.accionaborto.cl/prensa/">Ver links de prensa</a> */ ?>
