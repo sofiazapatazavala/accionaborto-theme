@@ -97,7 +97,7 @@
             <h3 class="textoamarillo underbarwhite">Gráficas</h3>
             <br>
             <?php
-              $my_query = new WP_Query( 'category_name=graficas&posts_per_page=2' );
+              $my_query = new WP_Query( 'category_name=graficas&posts_per_page=1' );
               while ( $my_query->have_posts() ) : $my_query->the_post();
               $do_not_duplicate[] = $post->ID;
             ?>
@@ -117,7 +117,7 @@
             <h3 class="textoamarillo underbarwhite">GIFs</h3>
             <br>
             <?php
-              $my_query = new WP_Query( 'category_name=gif&posts_per_page=2' );
+              $my_query = new WP_Query( 'category_name=gif&posts_per_page=1' );
               while ( $my_query->have_posts() ) : $my_query->the_post();
               $do_not_duplicate[] = $post->ID;
             ?>
@@ -137,7 +137,7 @@
             <h3 class="textoamarillo underbarwhite">Infografías</h3>
             <br>
             <?php
-              $my_query = new WP_Query( 'category_name=infografias&posts_per_page=2' );
+              $my_query = new WP_Query( 'category_name=infografias&posts_per_page=1' );
               while ( $my_query->have_posts() ) : $my_query->the_post();
               $do_not_duplicate[] = $post->ID;
             ?>
@@ -157,7 +157,7 @@
             <h3 class="textoamarillo underbarwhite">Videos</h3>
             <br>
             <?php
-              $my_query = new WP_Query( 'category_name=videos&posts_per_page=2' );
+              $my_query = new WP_Query( 'category_name=videos&posts_per_page=1' );
               while ( $my_query->have_posts() ) : $my_query->the_post();
               $do_not_duplicate[] = $post->ID;
             ?>
@@ -177,7 +177,7 @@
             <h3 class="textoamarillo underbarwhite">Programas de radio</h3>
             <br>
             <?php
-              $my_query = new WP_Query( 'category_name=programas-de-radio&posts_per_page=2' );
+              $my_query = new WP_Query( 'category_name=programas-de-radio&posts_per_page=1' );
               while ( $my_query->have_posts() ) : $my_query->the_post();
               $do_not_duplicate[] = $post->ID;
             ?>

@@ -14,7 +14,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  
+
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }
@@ -52,7 +52,7 @@
 
 #loadargumentos {
     background: #eed9a7;
-    padding-bottom: 70px;   
+    padding-bottom: 70px;
 }
 
 #headerargumentos{
@@ -62,11 +62,13 @@
 
 
 
-
+.background-herramientas {
+  background: #d81760;
+}
 
 #loadherramientas {
     background: #d81760;
-    padding-bottom: 70px;   
+    padding-bottom: 70px;
 }
 
 #loadherramientas h4{
@@ -127,7 +129,7 @@
 
 #loadprensa {
     background: #363636;
-    padding-bottom: 70px;   
+    padding-bottom: 70px;
 }
 
 #headerprensa{
@@ -149,7 +151,7 @@
 
 #loadarticulo {
     background: #eed9a7;
-    padding-bottom: 70px;   
+    padding-bottom: 70px;
     padding-top: 0;
 }
 
